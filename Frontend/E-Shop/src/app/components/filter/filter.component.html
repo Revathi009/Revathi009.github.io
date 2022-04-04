@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <h6>Category</h6>
+        <hr>
+        <div class="custom-control custom-radio m-2">
+            <input type="radio" value="" id="a" name="category" class="custom-control-input">
+            <label (click)='categorySelected("")' class="custom-control-label" for="a">All</label>
+        </div>
+        <div *ngFor='let category of categories; index as i ' class="custom-control custom-radio m-2">
+            <input type="radio" value="{{category._id}}" id="a{{i}}" name="category" class="custom-control-input">
+            <label (click)='categorySelected(category._id)' class="custom-control-label" for="a{{i}}">{{category.name}}</label>
+        </div>
+
+    </div>
+    <br>
+
+    
+
+</div>
